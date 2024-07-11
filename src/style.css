@@ -1,0 +1,157 @@
+body {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #fafafa;
+}
+
+.winner { 
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 1800% 1800%;
+  animation: rainbow 10s ease infinite;
+}
+
+h1 {
+  margin: 20px 0px 50px 0px;
+  color: #fafafa;
+  -webkit-text-stroke: 0.5px black;
+  text-shadow: 2px 2px black;
+}
+.playground {
+  margin: 0px 105px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 14% 72% 14%;
+}
+.playground > div {
+  width: 230px;
+  margin: 30px;
+  padding: 5px;
+  border: 3px solid black;
+  border-radius: 5px;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+
+.okay {
+  text-align: right;
+  padding: 50px 15px 10px 0px;
+}
+
+.playground > div > div:hover {
+  cursor: pointer;
+}
+
+.left-box {
+  animation: float-left 6s ease-in-out infinite;
+}
+
+.right-box {
+  animation: float-right 5.5s ease-in-out infinite;
+}
+
+button {
+  font-size: 20px;
+}
+
+.execute {
+  display: block;
+  margin: 5px auto;
+  width: 500px;
+}
+
+.start-button {
+  position: relative;
+  width: 200px;
+  /* top: px; */
+}
+
+.hide {
+  display: none;
+}
+
+.commands {
+  min-width: 500px;
+  min-height: 60px;
+  font-size: 24px;
+  margin: 0 auto;
+}
+
+.missionControl-title {
+  background-color: lightgoldenrodyellow;
+  margin: 0px;
+  position: relative;
+  padding: 0px 0px 0px 4px;
+  top: 12px;
+}
+
+.missionControl {
+  border: 5px solid black;
+  margin: 0px 0px;
+  padding: 20px;
+}
+
+.pattern {
+  display: block;
+  font-size: 12px;
+  max-width: 1000px;
+}
+
+.shakeit {
+  animation: shake 0.2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes float-left {
+  0% {
+      box-shadow: -2px 5px black;
+      transform: translateY(0px);
+  }
+  50% {
+      box-shadow: -2px 10px black;
+      transform: translateY(-10px);
+  }
+  100% {
+      box-shadow: -2px 5px black;
+      transform: translateY(0px);
+  }
+}
+
+@keyframes float-right {
+  0% {
+      box-shadow: 2px 5px black;
+      transform: translateY(0px);
+  }
+  50% {
+      box-shadow: 2px 10px black;
+      transform: translateY(-10px);
+  }
+  100% {
+      box-shadow: 2px 5px black;
+      transform: translateY(0px);
+  }
+}
+
+@keyframes rainbow { 
+  0%{background-position:0% 82%}
+  50%{background-position:100% 19%}
+  100%{background-position:0% 82%}
+}
